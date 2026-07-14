@@ -1,0 +1,11 @@
+{
+  "name": "forge",
+  "displayName": "Forge",
+  "version": "0.1.0",
+  "description": "Helps Claude Code work efficiently: Context Shield loads only the files that matter, and Style Sync keeps generated code consistent with your codebase's conventions.",
+  "author": {
+    "name": "Ronit"
+  },
+  "license": "MIT",
+  "keywords": ["context", "conventions", "efficiency"]
+}
