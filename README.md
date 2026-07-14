@@ -17,6 +17,17 @@ Minimizes context usage before Claude reads any files. Instead of sweeping the r
 
 Keeps generated code consistent with the existing codebase. Before writing code, Claude observes nearby files and infers the project's naming, formatting, file organization, import ordering, commenting style, and architectural patterns — then mirrors them exactly. It never introduces new conventions unless explicitly asked.
 
+## Context Ranker
+
+The first executable component of Forge. The Context Ranker is a lightweight, purely deterministic CLI tool that ranks likely relevant files based on a task description.
+
+- **What it does**: Extracts keywords from a request, scans filenames first, then selectively scans text/symbols, and outputs a ranked list of candidate files with confidence scores and reasoning.
+- **What it intentionally does NOT do**: It does not read full source files, build indexes, run caching layers, use machine learning, or rely on embeddings/vector databases. It relies on the Python standard library for maximum simplicity.
+- **How to run it**: 
+  ```bash
+  python src/context_ranker.py --repo <path_to_repo> --task "<your task description>"
+  ```
+
 ## Structure
 
 ```

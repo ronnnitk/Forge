@@ -24,7 +24,7 @@ Before writing or modifying any code in an existing project. Not needed for gree
    - **Commenting style** — density, doc-comment format (JSDoc, docstrings), whether comments explain "why" or are absent.
    - **Architectural patterns** — error handling style, state management, how existing features are layered, what abstractions are already in use.
 3. **Mirror.** Write the change as if the original author had. Reuse existing helpers and patterns instead of inventing parallels.
-4. **Verify.** Reread the diff: would it pass review without a single style comment? If any line looks foreign next to its neighbors, fix it.
+4. **Verify.** Before generating code, internally ask: "Would this diff look natural inside this repository?" Verify: naming, formatting, imports, architecture, comments, and file placement. If something differs from repository conventions, prefer the repository.
 
 ## Core Principles
 
